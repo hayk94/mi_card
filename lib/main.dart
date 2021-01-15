@@ -12,36 +12,70 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                color: Colors.red,
-                child: Text('Hello'),
-                width: 100,
+              CircleAvatar(
+                backgroundColor: Colors.red,
+                radius: 50,
+                backgroundImage: AssetImage('images/me.JPG'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    color: Colors.green,
-                    child: Text('Hello'),
-                    width: 100,
-                    height: 100,
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    child: Text('Hello'),
-                    width: 100,
-                    height: 100,
-                  ),
-                ],
+              Text(
+                'Hayk Safaryan',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40,
+                  fontFamily: 'Pacifico',
+                ),
               ),
-              Container(
-                color: Colors.blue,
-                child: Text('Hello'),
-                width: 100,
+              Text(
+                'Lead Software Engineer',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  letterSpacing: 2.5,
+                  color: Colors.teal[100],
+                  fontFamily: 'Source Sans Pro',
+                ),
+              ),
+              Divider(
+                color: Colors.teal.shade100,
+                indent: 105.0,
+                endIndent: 105.0,
+                thickness: .5,
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+374 01 23 45 67',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'hayk@email.com',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
